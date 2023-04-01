@@ -1,0 +1,4 @@
+
+Ile procesów powstanie przy n-krotnym wywolaniu funkcji fork-exec jak wyżej i dlaczego?
+
+W ten sposob powstanie 1 (macierzysty) + n (potomnych) procesow.

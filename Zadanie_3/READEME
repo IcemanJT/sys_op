@@ -1,0 +1,88 @@
+------------------------------------
+Jeremi Toroj             1.04.2022
+------------------------------------
+
+
+Zawartosc katalogu Zadanie_3
+--------------------------------------------------------------------------------------
+
+(a) Program do obslugi sygnalu (dfl, ign, custom) za pomoca pause()
+        Sklada sie z jednego modulu:
+            -zad3_a.c   - program glowny
+
+
+(b) Program wysylajcy sygnal do swojego procesu potomnego (proc. macierzysty potomnemu)
+        po upewnieniu sie, ze proces ten istnieje za pomoca fork(), kill() i execlp().
+        Program wypisuje status zakoczenia procesu potomnego i sygnal, go zamykajacy.
+            Sklada sie z dwoch modulow:
+                -zad3_b.c   - pogram glowny
+                -zad3_a.x   - program wykonywany przez execlp
+
+
+(c) Program tworzacy proces potomny, nastepnie czyniacy go liderem wlasnej grupy
+        i za pomoca funkcji execlp() uruchamiajacy inny program tworzacy kolejny proces
+        potomny nowo utworzonej grupy. Program wypisuje PID(child process) i status zakonczenia programu.
+            Sklada sie z trzech modulow:
+                -zad3_c.c   - program glowny
+                -help.x     - program tworzacy nowy program potomny
+                -zad3_a.c   - tak jak w (b) tylko proces potomny procesu potomnego przechwyconego przez
+                                funkcje execlp ( w programie help.x )
+                    
+                    
+---------------------------------------------------------------------------------------
+
+
+Kompilacja za pomoca pliku Makefile
+---------------------------------------------------------------------------------------
+By skompilowac program:
+
+$make all - kompiluje wszystkie programy
+
+zmienna nr1: nr sygnalu.
+
+zmienna nr2:
+    1 - SIG_DFL
+    2 - SIG_IGN
+    3 - user_custom
+
+$make runa signal=[nr1] action=[nr2] - uruchamia program a z odpowiednimi parametrami
+
+        w przypadku programu (a) makefile sam za pomoca "&" przekazuje powloce polecenie:
+            pkill -n [program_name] --signal [nr1]
+            
+            
+$make runb signal=[nr1] action=[nr2] - uruchamia program b z odpowiednimi parametrami
+
+
+$make runc signal=[nr1] action=[nr2] - uruchamia program c z odpowiednimi parametrami
+
+
+
+$make clean - usuwa pliki *.o i exe
+
+$make tar - czysci, a nastepnie kompresuje i archiwizuje folder
+
+----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

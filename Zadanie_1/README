@@ -1,0 +1,92 @@
+------------------------------------
+Jeremi Toroj             14.03.2022
+------------------------------------
+
+
+Zawartosc katalogu Zadanie_1
+--------------------------------------------------------------------------------------
+
+A. Program wypisujacy identyfikatory UID, GID, PID, PPID i PGID
+    dla wlasnego procesu.
+    Program sklada sie z jednego modulu:
+        1. 1zad_a.c    - program glowny.
+
+B. Program wywolujacy funkcje fork trzy razy w petli for i wypisujacy
+identyfikatory dla procesu macierzystego i wszystkich procesow potomnych
+z uzyciem funkcji wait().
+    Program sklada sie z jednego modulu:
+        1. 1zad_b.c     - program glowny.
+
+C. Program wywolujacy funkcje fork trzy razy w petli for i za pomoca funkcji
+sleep sprawia by proces potomny byl dziedziczony przez proces systemd.
+Następnie wypisuje dane procesu i drzewo procesu pokazujace proces macierzysty.
+    Program sklada sie z jednego modulu:
+        1. 1zad_c.c       - program glowny
+
+D. Program wywolujacy funkcje fork trzy razy w petli for i za pomoca funkcji
+sleep sprawia by procesy byly pogrupowane od najstarszego do najmlodszego,
+a proces macierzysty konczyl dopiero po zakonczeniu sie wszytkich procesow
+potomnych.
+    Program sklada sie z jednego modulu:
+        1. 1zad_d.c     - program glowny
+        
+        + drzewo.txt    - drzewo na podstawie outputu programu
+        
+E. Program wywolujacy funkcje fork trzy razy w petli for i wypisujacy
+identyfikatory dla procesu macierzystego i wszystkich procesow potomnych,
+czyniac je liderami wlasnych grup z uzyciem funkcji setgpid() i wait().
+    Program sklada sie z jednego modulu:
+        1. 1zad_e.c     - program glowny.
+        
+Odpowiedz na pytanie:
+
+    Przy n-krotnym wywolaniu funkcji fork utworzy sie 2^n procesow, gdyz z kazdym
+    wywolaniem funkcji fork kazdy proces programu tworzy nowy proces.
+    
+    
+---------------------------------------------------------------------------------------
+
+Kompilacja za pomoca pliku Makefile
+---------------------------------------------------------------------------------------
+By skompilowac program:
+
+A. $make zad1_a
+
+B. $make zad1_b
+
+C. $make zad1_c
+
+D. $make zad1_d
+
+E. $make zad1_e
+
+$make all - kompiluje wszystkie programy
+
+$make clean - usuwa pliki *.o i exe
+
+$make tar - czysci, a nastepnie kompresuje i archiwizuje folder
+
+----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

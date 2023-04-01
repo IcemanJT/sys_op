@@ -1,0 +1,53 @@
+------------------------------------
+Jeremi Toroj             24.03.2022
+------------------------------------
+
+
+Zawartosc katalogu Zadanie_2
+--------------------------------------------------------------------------------------
+
+    Program wypisujacy dane procesu macierzystego utworzonego przez program,
+a nastepnie przy zastosowaniu funkcji fork() tworzacy procesy potomne
+nadpisywane przez funkcje execlp().
+    program sklada sie z 2 modulow:
+        zad2.c - glowny plik zawierajacy glowny program
+        zad2_exec.c - plik zawierajacy program wykonywany przez funkcje execlp
+        
+---------------------------------------------------------------------------------------
+
+Kompilacja za pomoca pliku Makefile
+---------------------------------------------------------------------------------------
+By skompilowac program:
+
+$make all - kompiluje wszystkie programy
+
+$make run - uruchamia program z uzyciem odpowiednich argumentow
+
+$make clean - usuwa pliki *.o i exe
+
+$make tar - czysci, a nastepnie kompresuje i archiwizuje folder
+
+----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
