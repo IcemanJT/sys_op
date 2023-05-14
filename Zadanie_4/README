@@ -1,0 +1,33 @@
+------------------------------------
+Jeremi Toroj             11.04.2022
+------------------------------------
+
+
+Zawartosc katalogu Zadanie_4
+--------------------------------------------------------------------------------------
+
+    Program to zaimplementowany problem producenta i konsumenta, za pomoca funkcji
+        pipe(), write() i read() tworzy ideantyczna kopie pliku tekstowego.
+
+    Sklada sie z 3 modulow:
+        zad4.c - glowny program
+        text.txt - tekst do odtworzenia w innym pliku
+        text_copy.txt - plik do ktorego kopiowany jest text.txt
+
+
+---------------------------------------------------------------------------------------
+
+
+Kompilacja za pomoca pliku Makefile
+---------------------------------------------------------------------------------------
+By skompilowac program:
+
+$make all - kompiluje wszystkie programy
+
+$make runa - uruchamia program i porownuje pliki .txt
+
+$make clean - usuwa pliki *.o i exe
+
+$make tar - czysci, a nastepnie kompresuje i archiwizuje folder
+
+----------------------------------------------------------------------------------------

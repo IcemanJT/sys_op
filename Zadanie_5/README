@@ -1,0 +1,43 @@
+------------------------------------
+Jeremi Toroj             15.04.2022
+------------------------------------
+
+
+Zawartosc katalogu Zadanie_5
+--------------------------------------------------------------------------------------
+
+    Program to zaimplementowany problem producenta i konsumenta, za pomoca funkcji
+        za pomoca nazwanych potokow mkfifo(), program producent umieszcza towar w pliku
+        tymczasowym utworzonym przez mkfifo, a nastepnie program konsument pobiera te dane
+        i umieszcza w nowym pliku.
+
+    Sklada sie z 5 modulow:
+        zad5_a.c - glowny program uruchamiajacy producenta i konsumenta w procesach potomnych
+        prod.c  - program producent
+        cons.c  - program konsument
+        text.txt - tekst do odtworzenia w innym pliku
+        text_copy.txt - plik do ktorego kopiowany jest text.txt
+
+    Podpunkt (b):
+        1. mkfifo -m 0644 fifo_file
+        2. ./prod.x text.txt fifo_file
+        3. ./cons.x text_copy.txt fifo_file
+        4. diff -s text.txt text_copy.txt
+
+
+---------------------------------------------------------------------------------------
+
+
+Kompilacja za pomoca pliku Makefile
+---------------------------------------------------------------------------------------
+By skompilowac program:
+
+$make all - kompiluje wszystkie programy
+
+$make runa src=[filename.txt] tgt=[filename.txt] - uruchamia program i porownuje pliki .txt
+
+$make clean - czysci folder
+
+$make tar - czysci, a nastepnie kompresuje i archiwizuje folder
+
+----------------------------------------------------------------------------------------
