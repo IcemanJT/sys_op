@@ -1,0 +1,35 @@
+------------------------------------
+Jeremi Toroj             15.05.2022
+------------------------------------
+
+
+Zawartosc katalogu Zadanie_6
+--------------------------------------------------------------------------------------
+
+    Program to zaimplementowany problem wzajmnego wykluczania procesow przy pomocy
+        semaforow standardiu POSIX. Czas operacji jest symulowany funkcja sleep().
+         
+    Sklada sie z 4 modulow:
+        muliplier.c         - program glowny, tworzy proceny potomne przejmowane przez funkcje
+                                exclp() do uruchomienia modulu incrementation.c
+        incrementation.c    - program uruchamiany przez exclp()
+        semaphore.c         - zawiera funkcje sluzace do obslugi semaforow
+        semaphore.h         - biblioteka              
+
+
+---------------------------------------------------------------------------------------
+
+
+Kompilacja za pomoca pliku Makefile
+---------------------------------------------------------------------------------------
+By skompilowac program:
+
+$make all - kompiluje wszystkie programy
+
+$make run6 R=incrementation.x PROCNUM=[liczba procesow potomnych] SECTNUM=[liczba sekcji krytycznych]
+
+$make clean - czysci folder
+
+$make tar - czysci, a nastepnie kompresuje i archiwizuje folder
+
+----------------------------------------------------------------------------------------
