@@ -1,0 +1,39 @@
+------------------------------------
+Jeremi Toroj            26.05.2023
+------------------------------------
+
+
+Zawartosc katalogu Zadanie_7
+--------------------------------------------------------------------------------------
+
+    Implementacja problemu producenta i konsumenta przy pomocy pamieci dzielonej
+        i synchronizacji procesow za pomoca semaforow.
+    Program sklada sie z 7 modulow:
+        -main.c                     program glowny
+        -cons.c                     konsument program dla exclp
+        -prod.c                     program producenta dla exclp
+        -sh_m.c sh_m.h              biblioteka funkcji dla pamieci dzielonej
+        -semaphore.c semaphore.h    biblioteka funkcji dla semaforow
+        
+        ....
+        odpowiedzi          pseudokod dla wielu producentow i konsumentow
+        source.txt          zasoby dla producenta
+        source_copy.txt     plik do ktorego konsument przekleja dane
+
+
+---------------------------------------------------------------------------------------
+
+
+Kompilacja za pomoca pliku Makefile
+---------------------------------------------------------------------------------------
+By skompilowac program:
+
+$make all - kompiluje wszystkie programy
+
+$make run7, run7s - statyczna, run7d1, run7d2 - dynamiczne
+
+$make clean - czysci folder
+
+$make tar - czysci, a nastepnie kompresuje i archiwizuje folder
+
+----------------------------------------------------------------------------------------

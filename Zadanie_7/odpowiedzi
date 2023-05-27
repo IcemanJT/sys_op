@@ -1,0 +1,66 @@
+// problem solution for multiple producents and costumers
+
+#define N // buffor size
+
+typdef struct 
+{
+    Data buffor[N*P];              // P - amount of producents
+    int insert = 0;
+    int get = 0;        
+} Data; // shared buffor struct
+
+semaphore PROD = N;          
+semaphore CONS = 0;          
+semaphore WRITE = 1;
+semaphore READ = 1;
+
+int producents_PGID;         
+int consumers_PGID;        
+
+// Process Producent
+
+STOP () 
+{    
+    exit();  // exit func after reading all the data
+}
+
+Data dataProd;
+
+while (1) 
+{
+    P(PROD);                            
+    P(READ);
+    while (semaph_get_val(CONS) == N);  // buffor full check
+    get = (get + 1) % N;                // get inrementation
+    V(WRITE);
+    dataProd = read(file);              // reading from file
+    if (dataProd = null)                // end of file
+    {              
+        kill (STOP, producents_PGID);   // kill producents processes if end of file reached ... break
+    }
+    buffor[insert] = dataProd;          // data to buffor
+    V(CONS);                 
+}
+
+// Process Consumer
+
+STOP () 
+{       
+    exit();           // exit funs after writing all the data
+}
+
+Data dataCons;
+
+while (1) 
+{
+    P(CONS);    
+    P(READ);                       
+    dataCons = buffor[get];             // data to buffor
+    if (buffor == STOP)                 // no data to read
+    {               
+        kill (STOP, consumers_PGID);    // kill consumers processes if no data to read ... break
+    }
+    insert = (insert + 1) % N;         // insert incrementation
+    V(READ);
+    V(PROD);                         
+}
