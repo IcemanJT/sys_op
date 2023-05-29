@@ -132,7 +132,7 @@ int main(int argn, char *argv[])
 
 
 			semaph_up(prod_semaph_address);
-			printf ("Konsument: po SK semafor: %d\n", semaph_get_val(prod_semaph_address));
+			printf ("Consumer: semaphore value after CS:  %d\n", semaph_get_val(prod_semaph_address));
 
 			break;
         }
