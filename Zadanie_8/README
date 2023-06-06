@@ -1,0 +1,37 @@
+------------------------------------
+Jeremi Toroj            03.06.2023
+------------------------------------
+
+
+Zawartosc katalogu Zadanie_8
+--------------------------------------------------------------------------------------
+
+    Implementacja kolejek komunikatu za pomoca biblioteki mqueue.h
+        do komunikacji klienta z serwerem.
+        
+            Program sklada sie z 4 modulow:
+                client.c    - program klienta
+                server.c    - program serwera
+                
+                queue.c
+                queue.h - wlasna biblioteka do obslugi kolejki
+                
+    
+
+
+---------------------------------------------------------------------------------------
+
+
+Kompilacja za pomoca pliku Makefile
+---------------------------------------------------------------------------------------
+By skompilowac program:
+
+$make all - kompiluje wszystkie programy
+
+$make run8 - uruchamia program: 2 klientow i serwer
+
+$make clean - czysci folder
+
+$make tar - czysci, a nastepnie kompresuje i archiwizuje folder
+
+----------------------------------------------------------------------------------------
